@@ -23,14 +23,6 @@ On localhost, the rewrite will be made to the `127.0.0.1:5328` port, which is wh
 
 In production, the Flask server is hosted as [Python serverless functions](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python) on Vercel.
 
-## Developing Locally
-
-You can clone & create this repo with the following command
-
-```bash
-npx create-next-app nextjs-flask --example "https://github.com/vercel/examples/tree/main/python/nextjs-flask"
-```
-
 ## Getting Started
 
 First, install the dependencies:
