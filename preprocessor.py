@@ -7,8 +7,8 @@ def tokenLength(input):
     return len(encoding.encode(input))
 
 # cleans up all images and whitespace from an HTML, then outputs a list where each entry is a text paragraph
-def extract_paragraphs_from_html(html_file):
-    with open(html_file, 'r') as file:
+def extract_paragraphs_from_html(html_filepath):
+    with open(html_filepath, 'r') as file:
         soup = BeautifulSoup(file, 'html.parser')
         paragraphs = []
         for paragraph in soup.find_all('p'):
@@ -32,11 +32,16 @@ def grouper(paragraphs):
         i += 1
     return output
 
+# given a list of html filepaths, outputs a hashmap with filename: chunk_list as its key:value pairs
+def chunker(html_filepaths_list):
+    output = dict()
+    for html_filepath in html_filepaths_list:
+        filename = html_filepath.split("/")[-1][:-5]
+        output[filename] = grouper(extract_paragraphs_from_html(html_filepath))
+    return output
+
 # testing
 if __name__ == "__main__":
     ledger_filepath = "/Users/anthonyzhang/Development/square-hack-week/LedgerFAQ_goledgerfaq_.html"
-    paragraphs = extract_paragraphs_from_html("/Users/anthonyzhang/Development/square-hack-week/LedgerFAQ_goledgerfaq_.html")
-    real_output = grouper(paragraphs)
-    for i in range(10):
-        print(tokenLength(real_output[i]), real_output[i])
-        print()
+    test_output = chunker([ledger_filepath])
+    print(len(test_output))
