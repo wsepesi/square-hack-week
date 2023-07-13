@@ -1,0 +1,302 @@
+
+Block Data Classification & Handling Policy
+Effective Date: September 9, 2022
+
+
+This Data Classification & Handling Policy (the “Policy”) provides high-level principles governing the classification of the data elements at Block and the processing of such data, including storage, access, and other processing activities. This policy applies to all of Block, Inc., its subsidiaries, and affiliates (collectively, “Block”), including all of its business units and products.
+The Policy’s principles are implemented through each business unit’s Data Safety Levels (DSL) framework, which provides detailed guidance on data classification and processing requirements. Please refer to these frameworks for specific questions on data classification and handling:
+Cash App DSL Framework
+General Data Classification & Handling Framework (applies to Foundational, Spiral, Square, SFS, TBD, and TIDAL)
+I.  Framework Overview
+At Block, data is categorized according to (a) its Data Domain and (b) the minimum Data Safety Level that must be applied to its processing. 
+A Data Domain describes the classification of a certain data element under applicable regulatory, compliance, or other relevant classification frameworks. Examples of Data Domains include Personal Data, which is governed by various data protection laws like the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA); PCI Data, which must be protected according to the Payment Card Industry’s data security standards; and Business Data, which includes sensitive internal Block information like trade secrets and private communications with Block’s attorneys. In some cases, a data element may be classified as part of multiple domains. For example, a customer’s name is Personal Data, and when it appears on a payment card, it is also PCI Data. Where a given data element is subject to requirements from multiple domains, the stricter of the two should be used. 
+A Data Safety Level is a rating applied to a particular environment, system, or vendor documenting that it provides certain protections and is approved for working with sensitive data requiring that particular DSL. Systems are rated from 1 (Public) to 4 (Secret).  A given dataset is assigned minimum DSL requirements, taking into consideration the Data Domains involved, the applicable regulatory and compliance requirements, and any risks to Block, its customers, or employees that could result from the inadvertent disclosure, alteration, or destruction of the data.  
+Each business unit is responsible for maintaining its own framework for classifying Data Domains and applying DSL ratings to its environment, systems, and vendors. 
+II. Data Classification Overview
+Data Domain Overview
+Data Domain
+High-Level Description
+Examples
+Personal Data
+Information related to an identifiable person or household. Data is considered personal data if it can be used to identify a person, directly or indirectly.
+Name
+Address
+User ID
+Government-issued Identification Number
+Device ID
+Unique Customer Token
+Demographic information about an individual
+PCI Data 
+Cardholder and related data subject to the Payment Card Industry (PCI) data security standards. 
+Primary Account Number (PAN)
+Track Data (or “magnetic stripe data”)
+Cardholder Personal Identification Number 
+(PIN)
+Regulated Data
+Data that is subject to specific regulatory frameworks beyond general data protection laws. 
+Material Non-Public Information (MNPI)
+Tax Return Information (TRI)
+Confidential Supervisory Information (CSI)
+Suspicious Activity Reports (SARs) and related information 
+Business Data
+Internal Block data that is not Personal Data or subject to specific regulatory requirements, but reflects Block’s business operations, systems, processes, or other nonpublic information. 
+Trade secrets
+Internal security testing reports
+Attorney-client privileged communications
+De-identified Personal Data
+
+
+
+Data Safety Level Overview 
+Minimum DSL
+Name
+High-Level Description
+4
+
+
+Secret Data
+Highly restricted data, the unauthorized disclosure of which could pose a high risk to Block, its customers, or employees, including by creating a risk of identity theft for individuals, substantially undermining the security of Block’s systems, and/or subjecting Block to significant regulatory penalties. The highest level of security controls should be applied to Secret Data.
+3
+Confidential Data
+Data, usually Personal Data, the unauthorized disclosure of which could pose a significant risk to Block, its customers, or employees, including by exposing the private data of individuals and/or subjecting Block to regulatory penalties.
+2
+Internal Data
+Internal Block data that does not directly identify an individual but the unauthorized disclosure of which could nonetheless pose a significant risk to Block, such as by damaging Block’s business or undermining the security of Block’s systems. 
+1
+Public Data
+Data that either is in the public domain, or the public disclosure of which would pose no material risk to Block, its customers, or its employees.
+
+
+
+III. Data Domains
+The below provides a high-level summary of the major Data Domains Block processes. For detailed classifications of Data Domains and a mapping to the required minimum DSLs, please refer to your business unit’s data classification rubric(s). 
+Cash Data Classification Rubrics
+General Data Classification & Handling Framework (applies to Foundational, Spiral, Square, SFS, TBD, and Tidal)
+Personal Data
+Personal Data includes information related to an identifiable person or household. Data is considered Personal Data if it can be used to identify a person, directly or indirectly, including by reference to an identifier such as a name, an identification number, location data, an online identifier, or to one or more factors specific to the person (such as physical, cultural, or economic characteristics). Personal Data includes, but is broader than, data that is traditionally considered personally identifiable information, or “PII.”  Non-exhaustive examples of Personal Data include the following:
+Personal name
+Email address
+IP address
+Personal phone number
+Device ID
+Unique customer ID
+Date of birth
+Demographic data (e.g., race, sexual orientation) and biometric data (e.g., facial scans)
+Government-issued identification numbers, such as social security numbers
+Financial information, such as a customer bank account number
+Inferences 
+Credit score
+Underwriting decisions
+Pseudonymized Personal Data
+The processing of Personal Data, including its collection, use, disclosure, retention, and destruction, is governed by a variety of data protection laws, including the European General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), the Federal Trade Commission Act, the Canadian Personal Information Protection and Electronic Documents Act (PIPEDA), the Australian Privacy Act 1988, and others. Personal Data, even if pseudonymized, may never be shared with third parties unless approved through the formal vendor onboarding process or otherwise in consultation with Privacy Counsel.  For information on how Personal Data may be transformed to reduce its sensitivity, see the below Note On Reducing the Sensitivity of Datasets.
+PCI Data
+PCI Data is any data subject to Payment Card Industry (PCI) data security requirements and must be processed consistent with those requirements. PCI Data consists of the card account data and card authentication data of payment cards, including credit, debit, and gift cards, where the card is branded by (i.e., contains the logo of) a major card brand. Non-exhaustive examples of PCI Data include the following:
+Primary Account Number (PAN)
+Address Verification Service (AVS) data
+Issuer Identification Number (IIN) / Bank Identification Number (BIN)
+Card Verification Code (CVC)
+Track Data (or “magnetic stripe data”)
+Cardholder Personal Identification Number (PIN)
+Regulated Data
+Regulated Data is any data subject to specific regulatory requirements beyond general data protection laws. Non-exhaustive examples of Regulated Data include the following:
+Material Non-Public Information (MNPI), as defined in the Insider Trading Policy, including, but not limited to, information regarding: financial results and guidance; product information; mergers and acquisitions; and material cybersecurity incidents
+Suspicious Activity Reports (SARs) and related case information
+Watchlist screening results, i.e., AML and sanctions list screening
+Tax Return Information (TRI), i.e., information Block collects in connection with preparing a customer’s tax return 
+Confidential Supervisory Information (CSI), i.e., non-public information related to the government supervision of Square Financial Services, Inc. 
+Regulated Data must only be processed as permitted by the applicable regulatory regime(s). If you require guidance on the handling of certain Regulated Data beyond what is captured in your business unit’s DSL Framework and any other applicable Block policies, consult Regulatory Counsel. 
+Business Data
+Business Data is any Block data that is not Personal Data or subject to specific regulatory requirements, but reflects Block’s business operations, systems, processes or other non-public information. Non-exhaustive examples of Business Data include the following:
+
+
+All information about Block customers or personnel not classified in the above categories, including de-identified Personal Data 
+Data specifically relating to investigations into fraud or other illegal activity 
+Documents reflecting Block trade secrets or intellectual property
+Documents covered by contractual non-disclosure agreements or that is otherwise internal and private to Block
+Communications with Block’s legal team or outside attorneys
+Documents containing the results of security assessments (such as penetration testing reports, reports from third-party audits, etc.) 
+Internal business metrics
+
+
+IV. Data Safety Levels
+The below provides a high-level summary of the processing requirements for each Data Safety Level. For detailed guidance on appropriate processing, as well as a mapping of data types to the required DSL, consult your business unit’s DSL framework.
+Secret Data (DSL 4)
+Data is classified as Secret when the unauthorized disclosure, alteration, or destruction of that data could cause a high level of risk to Block, its customers, and/or its employees. Secret Data includes certain types of Personal Data, PCI Data, and Regulated Data (consult your business unit’s DSL Framework for more specific guidance). The improper processing of Secret Data may, among other things, result in the risk of identity theft for individuals, substantially undermine the security of Block’s systems, subject Block to significant regulatory penalties, and/or damage Block’s reputation.
+The highest level of security controls should be applied to Secret data. Secret Data must be protected according to the following high-level principles:
+Control Type
+Required Controls for Secret Data
+
+Access Control
+Logical and physical controls must be in place to enforce access.  Access must be granted according to the principles of least privilege and need-to-know.
+Access approval:
+A record of approval for access must exist that specifies approved permissions.
+Access approvals must be time bound using either a) periodic reviews of access permissions, or b) access approvals that expire after a predefined period and require re-approval for extension.
+User access (humans):
+Must require multi-factor authentication.
+Must be authorized based on specific access permissions defined per data set.
+Automated access (robots):
+Must require authenticated workload identity using a replay-resistant authentication mechanism.
+Must be authorized based on specific workload identities.
+Multi-Party Authorization:
+A quorum is required to authorize any human access to a system that can access this data (e.g. opening a shell as a service, logging into a database).
+Minimum quorum size is two users (N >= 2).
+Break-glass procedures to override the quorum protocol are prohibited.
+Human access to data must be limited to individual records as needed and not to bulk data sets.
+
+
+Auditability
+An audit trail must exist that records both user access to the datastore and information about what data was accessed.
+
+
+Data Encryption
+Must be encrypted at rest with application layer encryption (client-side encryption).
+Must be encrypted in transit. 
+Data Collection and Processing
+All collection, processing, and retention of Secret Data must have a legitimate business purpose.
+When the business purpose for which the data was collected no longer applies, the data must be destroyed, unless the data must be retained for legal or compliance purposes.
+Must not be disclosed via messaging channels such as email or Slack, or in ticketing systems such as Jira.
+Data Sharing
+Data can only be shared with third parties who have been approved for such sharing through the vendor onboarding process (go/buy) or as otherwise approved by Privacy Counsel and InfoSec.
+
+Confidential Data (DSL 3)
+Confidential Data is less sensitive than Secret Data, but the unauthorized disclosure, alteration or destruction of Confidential Data could cause a significant level of risk to Block, its customers, and/or its employees. Confidential Data is usually, but is not always, Personal Data (consult your business unit’s DSL Framework for more specific guidance). The improper processing of Confidential Data may, among other things, result in the exposure of the private data of individuals, subject Block to regulatory penalties, and/or damage Block’s reputation. 
+Confidential Data must be protected according to the following high-level principles:
+Control Type
+Required Controls for Confidential Data
+
+Access Control
+Logical and physical controls must be in place to enforce access.  Access must be granted according to the principles of least privilege and need-to-know.
+Access approval:
+A record of approval for access must exist that specifies approved permissions.
+Access approvals must be time bound using either a) periodic reviews of access permissions, or b) access approvals that expire after a predefined period and require re-approval for extension.
+User access (humans):
+Must require multi-factor authentication.
+Must be authorized based on specific access permissions defined per data set
+Automated access (robots):
+Must require authenticated workload identity (e.g. certificate, user ID and password).
+Must be authorized based on specific workload identities.
+Multi-Party Authorization:
+A quorum is required to authorize any human access to a system that can access this data (e.g. opening a shell as a service, logging into a database).
+Minimum quorum size is two users (N >= 2).
+Break-glass procedures to override the quorum protocol are permitted under certain circumstances.
+
+
+Auditability
+An audit trail must exist that records user access to the data store.
+
+
+Data Encryption
+Must be encrypted at rest.
+Must be encrypted in transit. 
+Data Collection and Processing
+All data collection, processing, and retention must have a legitimate business purpose.
+When the business purpose for which the data was collected no longer applies, the data must be destroyed, unless the data must be retained for legal or compliance purposes.
+Must not be disclosed via messaging channels such as email or Slack, or in ticketing systems such as Jira. 
+Data Sharing
+Data can only be shared with third parties who have been approved for such sharing through the vendor onboarding process (go/buy) or as otherwise approved by Privacy Counsel and InfoSec.
+
+Internal Data (DSL 2)
+Data is classified as Internal Data when it does not directly identify individuals and is not DSL 3 or 4 data, but the unauthorized disclosure, alteration, or destruction of the data could cause a risk to Block. The improper processing of Internal Data may, among other things, result in damage to Block’s business operations or undermine the security of its systems. 
+Internal Data must be protected according to the following high-level principles. 
+Control Type
+Required Controls for Internal Data
+
+Access Control
+Logical and physical controls must be in place to enforce access.  Access must be granted according to the principle of need-to-know.
+Access approval:
+A record of approval for access must exist that specifies approved permissions.
+Access approvals may have an unspecified duration.
+Access reviews may be ad hoc.
+User access (humans):
+Must require multi-factor authentication.
+Must be authorized, but may be based on broadly-scoped access permissions (e.g. approved based on role or job function and allowing access to a data store).
+Automated access (robots):
+Must require authenticated workload identity (e.g. certificate or user ID and password).
+Must be authorized, but may be broadly scoped to a class of services, and may be broadly permissive (e.g. read/write access to all services in a given trust domain)
+
+
+Auditability
+An audit trail must exist that records user access to the data store.
+Data Collection and Processing
+All data collection, processing, and retention must have a legitimate business purpose.
+When the data no longer serves a legitimate business purpose, the data should be destroyed, unless the data must be retained for legal or compliance purposes.
+Information that reflects intellectual property, trade secrets, that is covered by contractual non-disclosure agreements, or that includes communications with attorneys and advice from Block attorneys must never be shared outside Block without express permission from Legal.
+Data Sharing
+Data can only be shared with third parties who have been approved for such sharing through the vendor onboarding process (go/buy).
+
+Public Data (DSL 1)
+Public Data is data that either is publicly available, or the public disclosure of which would pose no material risk to Block, its customers, or its employees. Examples of Public Data include: information posted to a public website, and fully anonymized datasets.
+Control Type
+Required Controls for Public Data
+
+Access Control
+Write access must require authenticated identity.
+Write access must be authorized based on business need.
+
+
+
+
+
+V. Note on Reducing the Sensitivity of Datasets
+Secret or Confidential Personal Data may at times be transformed in order to reduce the sensitivity of the dataset, by reducing the likelihood of identification of an individual and/or reducing the risk of harm if the data were to be exposed. Personal Data is considered transformed when it has been redacted, generalized, swapped, or otherwise perturbed in order to reduce or eliminate the identifiability of the data set. 
+Transformed Personal Data can be pseudonymized, de-identified, or anonymized:
+Transformed Data Category
+Definition
+Data Domain
+Minimum DSL
+
+Pseudonymized
+All direct identifiers (such as name, username, or home address) have been removed or transformed into pseudonyms (e.g., a customer token).
+Personal Data
+2 or 3*
+
+
+De-Identified
+All direct or quasi-identifiers have either been removed or manipulated to break the linkage to real world identities. Once a dataset has been de-identified, it is no longer considered Personal Data. 
+Business Data
+2
+
+
+Anonymized
+Does not contain direct or quasi-identifiers. All have been removed or manipulated such that the data cannot be re-identified, even using statistical analysis and other data sets. Once a dataset has been anonymized, it is no longer considered Personal Data.
+Business Data
+1
+
+* The minimum DSL for pseudonymized datasets varies. Consult business unit-specific DSL Frameworks for detailed guidance. However, pseudonymized data is always considered Personal Data for purposes of applicable data protection laws. Therefore, pseudonymized data may never be shared with third parties unless approved through the go/buy process or otherwise in consultation with Privacy Counsel.  
+VI. Definitions
+Term
+Description
+
+Biometric data
+Data pertaining to bodily or behavioral characteristics that could permit identification of a person. For example: facial information, fingerprints, iris scans, handwriting pattern, typing rhythm, gait and voice pattern.
+
+
+Inferences
+Inferences are personal data if they are drawn about individuals and reflect the individual's preferences, characteristics, psychological trends, preferences, predispositions, behavior, attitudes, intelligence, abilities, and aptitudes. Examples include analytics assessing an individual’s likelihood of being interested in certain services or making on-time payments.
+
+
+Direct identifiers
+Data that, on its own or with minimal additional information, identifies an individual in a dataset. For example: name, unique customer number, or passport number. 
+Quasi-identifiers
+Data which cannot be used to identify an individual in isolation, but could be used to identify someone in combination with other values. For example: IP address, zip code, credit score. 
+
+
+
+VII. Exceptions and Contacts
+Exceptions to the Policy
+All systems created after the original publication date of this Policy must immediately comply with its requirements, unless an exception has been granted. For any existing systems for which temporary exceptions to the Policy are warranted, the system owners are responsible for working with InfoSec to establish a plan to achieve compliance with the Policy within an appropriate time frame. 
+To request an exception to the requirements set forth in the Policy, please contact #Data-Policy-Questions. All exceptions must be approved by a representative from InfoSec, in consultation as necessary with a representative from Privacy Counsel. They must also be documented and reviewed periodically. 
+Contacts
+For questions or comments about this Policy, please contact #Data-Policy-Questions. For questions about the classification or appropriate processing of specific data, please follow the contact instructions set forth in your business unit’s DSL framework.
+
+
+VIII. Revisions to the Policy
+Annual Reviews
+The Policy will be reviewed annually by a representative from Privacy Counsel and InfoSec. Revisions will be made as warranted.
+Revision History
+Date
+Edited By
+Reason for Change
+September 9, 2022
+Sam Adriance
+Original Publication

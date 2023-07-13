@@ -34,3 +34,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 __pycache__
+
+*.npz
+*.env
+.env
+
+.vscode/*
+.vscode/
