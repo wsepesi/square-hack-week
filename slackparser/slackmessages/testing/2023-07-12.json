@@ -1,0 +1,239 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1689183317.469269",
+        "user": "U05GTMP47E0",
+        "text": "<@U05GTMP47E0> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "bot_add",
+        "text": "added an integration to this channel: <https:\/\/oakersworkspace.slack.com\/services\/B05GNDKPPV3|renee bot>",
+        "user": "U05GTMP47E0",
+        "bot_id": "B05GNDKPPV3",
+        "bot_link": "<https:\/\/oakersworkspace.slack.com\/services\/B05GNDKPPV3|renee bot>",
+        "ts": "1689184231.233789"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1689185257.877349",
+        "user": "U05H446FJ81",
+        "text": "<@U05H446FJ81> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1689185275.355139",
+        "user": "U05GRBKV7TM",
+        "text": "<@U05GRBKV7TM> has joined the channel"
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1689185298.061479",
+        "user": "U05GAUK8R7H",
+        "text": "<@U05GAUK8R7H> has joined the channel"
+    },
+    {
+        "bot_id": "B05HF2TL7CG",
+        "type": "message",
+        "text": "Hello, Slack!",
+        "user": "U05GRBFLKU2",
+        "ts": "1689185574.062099",
+        "app_id": "A05GJK8PMDL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "hy+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, Slack!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T05GR575G91",
+        "bot_profile": {
+            "id": "B05HF2TL7CG",
+            "deleted": false,
+            "name": "renee bot",
+            "updated": 1689184231,
+            "app_id": "A05GJK8PMDL",
+            "icons": {
+                "image_36": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png",
+                "image_48": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"
+            },
+            "team_id": "T05GR575G91"
+        }
+    },
+    {
+        "client_msg_id": "6b9e7add-955a-4344-8630-0c12abb30653",
+        "type": "message",
+        "text": "hey renee bot",
+        "user": "U05GAUK8R7H",
+        "ts": "1689185588.852269",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Wwq0",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "hey renee bot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T05GR575G91",
+        "user_team": "T05GR575G91",
+        "source_team": "T05GR575G91",
+        "user_profile": {
+            "avatar_hash": "df583a711a25",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-12\/5582146659857_df583a711a25a3dbf2e1_72.jpg",
+            "first_name": "Ryan",
+            "real_name": "Ryan Tsang",
+            "display_name": "Ryan Tsang",
+            "team": "T05GR575G91",
+            "name": "ryan.j.tsang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "bc8cf227-4d1b-4ab1-9d65-05beb015899e",
+        "type": "message",
+        "text": "can you send this in general",
+        "user": "U05GAUK8R7H",
+        "ts": "1689185591.001089",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5DT",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "can you send this in general"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T05GR575G91",
+        "user_team": "T05GR575G91",
+        "source_team": "T05GR575G91",
+        "user_profile": {
+            "avatar_hash": "df583a711a25",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-07-12\/5582146659857_df583a711a25a3dbf2e1_72.jpg",
+            "first_name": "Ryan",
+            "real_name": "Ryan Tsang",
+            "display_name": "Ryan Tsang",
+            "team": "T05GR575G91",
+            "name": "ryan.j.tsang",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1689186041.400969",
+        "user": "U05GRDTCS67",
+        "text": "<@U05GRDTCS67> has joined the channel"
+    },
+    {
+        "bot_id": "B05HF2TL7CG",
+        "type": "message",
+        "text": "Hello, Slack!",
+        "user": "U05GRBFLKU2",
+        "ts": "1689186041.674869",
+        "app_id": "A05GJK8PMDL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1mx",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, Slack!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T05GR575G91",
+        "bot_profile": {
+            "id": "B05HF2TL7CG",
+            "app_id": "A05GJK8PMDL",
+            "name": "renee bot",
+            "icons": {
+                "image_36": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png",
+                "image_48": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"
+            },
+            "deleted": false,
+            "updated": 1689184231,
+            "team_id": "T05GR575G91"
+        }
+    },
+    {
+        "bot_id": "B05HF2TL7CG",
+        "type": "message",
+        "text": "Hello, ryans mom!",
+        "user": "U05GRBFLKU2",
+        "ts": "1689186160.731119",
+        "app_id": "A05GJK8PMDL",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "RII8",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hello, ryans mom!"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T05GR575G91",
+        "bot_profile": {
+            "id": "B05HF2TL7CG",
+            "app_id": "A05GJK8PMDL",
+            "name": "renee bot",
+            "icons": {
+                "image_36": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png",
+                "image_48": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"
+            },
+            "deleted": false,
+            "updated": 1689184231,
+            "team_id": "T05GR575G91"
+        }
+    }
+]
