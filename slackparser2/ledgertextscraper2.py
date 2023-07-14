@@ -65,7 +65,7 @@ def get_slack_data_2(file_name):
     print(len(data))
 
     for a in data:
-        if len(a) < 10:
+        if tokenLength(a) < 3:
             data.remove(a)
     
     print(len(data))
