@@ -49,14 +49,6 @@ def chunker(directory):
 # testing
 if __name__ == "__main__":
     ledger_filepath = "Ledger/"
-    
-    html_filepaths_list = []
-    for filename in os.listdir(ledger_filepath):
-        filepath = os.path.join(ledger_filepath, filename)
-        if os.path.isfile(filepath):
-            html_filepaths_list.append(filepath)
-    print(html_filepaths_list)
-    print()
 
     output_map = chunker(ledger_filepath)
     for k, v in output_map.items():
