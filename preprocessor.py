@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import tiktoken
-
+import os
 # outputs the token length of a string according to the "cl100k_base" model
 def tokenLength(input):
     encoding = tiktoken.get_encoding("cl100k_base")
@@ -32,8 +32,14 @@ def grouper(paragraphs):
         i += 1
     return output
 
-# given a list of html filepaths, outputs a hashmap with filename: chunk_list as its key:value pairs
-def chunker(html_filepaths_list):
+# given a directory of files, outputs a hashmap with (filename : chunk_list) as its (key : value) pairs
+def chunker(directory):
+    html_filepaths_list = []
+    for filename in os.listdir(directory):
+        filepath = os.path.join(directory, filename)
+        if os.path.isfile(filepath) and not filename.startswith('.'):
+            html_filepaths_list.append(filepath)
+
     output = dict()
     for html_filepath in html_filepaths_list:
         filename = html_filepath.split("/")[-1][:-5]
@@ -42,6 +48,17 @@ def chunker(html_filepaths_list):
 
 # testing
 if __name__ == "__main__":
-    ledger_filepath = "/Users/anthonyzhang/Development/square-hack-week/LedgerFAQ_goledgerfaq_.html"
-    test_output = chunker([ledger_filepath])
-    print(len(test_output))
+    ledger_filepath = "Ledger/"
+    
+    html_filepaths_list = []
+    for filename in os.listdir(ledger_filepath):
+        filepath = os.path.join(ledger_filepath, filename)
+        if os.path.isfile(filepath):
+            html_filepaths_list.append(filepath)
+    print(html_filepaths_list)
+    print()
+
+    output_map = chunker(ledger_filepath)
+    for k, v in output_map.items():
+        print(k, v)
+        print()
