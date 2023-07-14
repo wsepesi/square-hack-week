@@ -3,6 +3,10 @@ from type_utils import ProcessedData
 
 SERVICES = [
     "ledger",
+    "payments",
+    "regulator",
+    "risk",
+    "payouts"
 ]
 
 def RELEVANCY(prompt: str) -> str:
@@ -80,7 +84,7 @@ def GET_ANSWER(prompt: str, sources: List[ProcessedData]) -> str:
     return f"""### Instructions:
     You are a helpful question answering chatbot. You answer questions politely, concisely, and factually, using the resources available to you. 
 
-    Provided below are 5 factual sources that you can use to answer questions. You will be asked to answer a prompt, pulling data from the sources to back up your response. In addition to your answer, provide a list of sources that you used to answer the question, in the format "1, 3, 5".
+    Provided below are 5 factual sources that you can use to answer questions. You will be asked to answer a prompt, pulling data from the sources to back up your response.
 
     Sources: 
     {source_string}

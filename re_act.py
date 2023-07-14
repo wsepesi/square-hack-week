@@ -5,6 +5,7 @@ from typing import List
 
 model_name = "nous-hermes-13b.ggmlv3.q4_0.bin"
 model = GPT4All(model_name)
+VERBOSE = True
 
 def BASE(prompt: str) -> str:
     return f"""### Instruction:
@@ -45,6 +46,8 @@ def REACT(prompt: str) -> str:
 
     cur_prompt = first_prompt
     while True:
+        if VERBOSE:
+            print(cur_prompt)
         res = call_model_until_END(cur_prompt)
         action, meta = parse_last_action(res)
 
@@ -52,11 +55,13 @@ def REACT(prompt: str) -> str:
             return meta
         elif action == "SEARCH":
             docs: List[ProcessedData] = get_relevant_documents(meta)
+            if VERBOSE:
+                print(docs)
             new_prompt = f"""{prompt}
 
             ### Response:
             {res}
-            RESULT: {" ".join([doc.text for doc in docs])}
+            RESULT: {" ".join([doc.text for doc in docs[0:2]])}
             """
 
             cur_prompt = new_prompt
@@ -68,6 +73,8 @@ def get_END_tokens(text: str) -> int:
     return text.lower().count(" END".lower())
 
 def call_model_until_END(prompt: str) -> str:
+    if VERBOSE:
+        print(prompt)
     expected_num_END = get_END_tokens(prompt)
     cur_num_END = 0
     tokens = []
@@ -107,3 +114,11 @@ def parse_last_action(result: str):
     # otherwise, error
     else:
         raise Exception("last line not an action")
+    
+
+def main():
+    PROMPT = 'hello there, is there a way to extend a hold on a user applied via regulator "create user hold" ? for more context, credit risk ops team applied a hold on a seller(convene) but the duration is defaulted to 90 days which is not sufficient for this use case. without an option to extend to a custom time, ops team is waiting for the existing hold to expire and then apply a new hold for the next 90 days using reminders which is tedious and error prone. just wanted to check if there is any override that can be done in the backend to extend the hold. thanks  :pray:'
+    print(REACT(PROMPT))
+
+if __name__ == "__main__":
+    main()
