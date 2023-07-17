@@ -1,5 +1,5 @@
 from typing import List
-from type_utils import ProcessedData
+from inference_utils.type_utils import ProcessedData
 
 SERVICES = [
     "ledger",

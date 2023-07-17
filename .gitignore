@@ -43,3 +43,7 @@ __pycache__
 .vscode/
 
 Ledger/*
+
+data/
+
+onboarding_utils/slackparser/slackmessages

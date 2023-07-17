@@ -1,12 +1,17 @@
 from gpt4all import GPT4All
 from run_agent import get_relevant_documents
-from type_utils import ProcessedData
+from inference_utils.type_utils import ProcessedData
 from typing import List
 
 model_name = "nous-hermes-13b.ggmlv3.q4_0.bin"
 model = GPT4All(model_name)
 VERBOSE = True
 
+
+"""
+Implements a basic one-shot example of ReACT prompting, as taken from the original paper. 
+TODO: consider replacing the example with a more domain-specific one
+"""
 def BASE(prompt: str) -> str:
     return f"""### Instruction:
     You are an intelligent question answering agent. You answer questions politely, concisely, and factually, using the resources available to you. You operate through a series of actions, which determine how you proceed through your problem solving process. These are:
@@ -70,22 +75,27 @@ def REACT(prompt: str) -> str:
 
 def get_END_tokens(text: str) -> int:
     # get the number of times " END" occurs in the text
-    return text.lower().count(" END".lower())
+    return text.lower().count(" END")
 
 def call_model_until_END(prompt: str) -> str:
     if VERBOSE:
         print(prompt)
     expected_num_END = get_END_tokens(prompt)
+    print(expected_num_END)
     cur_num_END = 0
     tokens = []
     for token in model.generate(prompt, streaming=True):
         if token == " END":
-            if cur_num_END == expected_num_END:
-                return ''.join(tokens)
-            else:
-                cur_num_END += 1
+            # print("HELLOOO")
+            # if cur_num_END == expected_num_END:
+            return ''.join(tokens)
+            # else:
+            #     cur_num_END += 1
+            #     print(cur_num_END)
         tokens.append(token)
 
+    if VERBOSE:
+        print(''.join(tokens))
     raise Exception("end tokens didnt line up")
 
 def parse_last_action(result: str):

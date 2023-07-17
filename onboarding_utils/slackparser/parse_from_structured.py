@@ -7,7 +7,7 @@ def tokenLength(input):
     encoding = tiktoken.get_encoding("cl100k_base")
     return len(encoding.encode(input))
 
-def get_slack_data():
+def get_slack_data_from_structured():
     source_directory = 'slackmessages'
     destination_directory = 'slackmessages2'
     chunksize = 5
@@ -26,13 +26,13 @@ def get_slack_data():
 
     return full_chunked_data
 
-data = get_slack_data()
+# data = get_slack_data()
 
-# print((data))
-# print(len(data[0]))
-# print((data[0][0]))
-# print((data[0][0][1]))
+# # print((data))
+# # print(len(data[0]))
+# # print((data[0][0]))
+# # print((data[0][0][1]))
 
-for i in data:
-    for a in i:
-        print(tokenLength(a[1]), a[1])
+# for i in data:
+#     for a in i:
+#         print(tokenLength(a[1]), a[1])

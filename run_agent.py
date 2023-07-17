@@ -1,10 +1,10 @@
-from prompts import *
+from inference_utils.prompts import *
 from vlite import VLite
 from gpt4all import GPT4All
 
 PROMPT = 'hello there, is there a way to extend a hold on a user applied via regulator "create user hold" ? for more context, credit risk ops team applied a hold on a seller(convene) but the duration is defaulted to 90 days which is not sufficient for this use case. without an option to extend to a custom time, ops team is waiting for the existing hold to expire and then apply a new hold for the next 90 days using reminders which is tedious and error prone. just wanted to check if there is any override that can be done in the backend to extend the hold. thanks  :pray:'
 VERBOSE = True
-DB_PATH = "v1.npz"
+DB_PATH = "v1.npz" # specify your database path here
 
 model_name = "nous-hermes-13b.ggmlv3.q4_0.bin"
 model = GPT4All(model_name)

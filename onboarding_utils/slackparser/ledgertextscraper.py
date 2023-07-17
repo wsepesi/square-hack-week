@@ -20,6 +20,9 @@ def clean_text(text):
     return text.strip()
 
 def get_slack_data(file_name):
+    """
+    Scrapes slack data from a text file assuming the data was manually copied from the slack webapp
+    """
     data = []
 
     # Open the text file
