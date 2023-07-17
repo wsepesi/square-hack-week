@@ -11,9 +11,9 @@ Supercharge your service's Slack channel with an AI-assistant. Field external an
 
 ## Credits
 
-`/` @wsepesi
-`/experiments` @wsepesi
-`/inference_utils` @wsepesi
-`/onboarding_utils/docs_parser` @anthonyzhang-square
-`/onboarding_utils/slackparser` @rtsng
+`/` @wsepesi \
+`/experiments` @wsepesi \
+`/inference_utils` @wsepesi \
+`/onboarding_utils/docs_parser` @anthonyzhang-square \
+`/onboarding_utils/slackparser` @rtsng \
 `/slack_bot_utils` @jacob-tamor @reneenee03
