@@ -1,6 +1,10 @@
 # Square Scout
 
-Supercharge your service's Slack channel with an AI-assistant. Field external and internal questions asynchronously with factually-grounded and thought-out responses building on your team's documentation and past Slack conversations, supported by entirely local privacy-first models.
+Supercharge your service's Slack channel with an AI-assistant. Field external and internal questions asynchronously with factually-grounded and thought-out responses building on your team's documentation and past Slack conversations, supported by entirely local privacy-first models. 
+
+## Demo
+
+[Here](https://docs.google.com/presentation/d/1dmuUdPw0bm6VpDNNi3CqmSU5T77TA3mYOEh4bkHkwBw/edit?usp=sharing)
 
 ## Getting Started
 
